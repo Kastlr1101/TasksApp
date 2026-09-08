@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aufgaben Planer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+
+<body>
+
+    <button id="plusBtn">+</button>
+    <button id="modeBtn">Dark Mode</button>
+
+    <h1>Aufgaben Planer</h1>
+
+    <div class="task-form" id="taskForm">
+        <h2>Neue Aufgabe hinzufügen</h2>
+
+        <input type="text" id="title" placeholder="Titel der Aufgabe">
+        <textarea id="description" placeholder="Beschreibung"></textarea>
+        <textarea id="notes" placeholder="Notizen (optional)"></textarea>
+
+        <select id="priority">
+            <option value="Niedrig">Niedrig</option>
+            <option value="Mittel">Mittel</option>
+            <option value="Hoch">Hoch</option>
+        </select>
+
+        <input type="text" id="assigned" placeholder="Wer soll die Aufgabe erledigen?">
+        <input type="date" id="date">
+
+        <button onclick="addTask()">Aufgabe hinzufügen</button>
+    </div>
+
+    <div class="task-list" id="taskList"></div>
+
+    <!-- Bearbeiten Popup -->
+    <div id="editPopup" class="popup">
+        <div class="popup-content">
+            <h2>Aufgabe bearbeiten</h2>
+
+            <input type="text" id="editTitle">
+            <textarea id="editDescription"></textarea>
+            <textarea id="editNotes"></textarea>
+
+            <select id="editPriority">
+                <option value="Niedrig">Niedrig</option>
+                <option value="Mittel">Mittel</option>
+                <option value="Hoch">Hoch</option>
+            </select>
+
+            <input type="text" id="editAssigned">
+            <input type="date" id="editDate">
+
+            <button id="saveEditBtn">Speichern</button>
+            <button id="cancelEditBtn">Abbrechen</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+    </script>
+</body>
+
+</html>
