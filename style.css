@@ -224,3 +224,91 @@ h1 {
     padding: 10px;
     margin-top: 10px;
 }
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-top: 70px;
+    }
+
+    #plusBtn {
+        width: 60px;
+        height: 60px;
+        font-size: 34px;
+        top: 15px;
+        left: 15px;
+    }
+
+    #modeBtn {
+        padding: 12px 18px;
+        font-size: 16px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .task-form {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .task-form input,
+    .task-form textarea,
+    .task-form select {
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    .task-form button {
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    .task-item {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .task-item h3 {
+        font-size: 22px;
+    }
+
+    .task-item p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .task-buttons button {
+        flex: 1;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    /* Popup fullscreen on mobile */
+    .popup-content {
+        width: 90%;
+        max-width: none;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    .popup-content input,
+    .popup-content textarea,
+    .popup-content select {
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    .popup-content button {
+        font-size: 20px;
+        padding: 14px;
+    }
+}
